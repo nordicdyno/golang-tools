@@ -2,6 +2,10 @@
 
 Demo how to install binary dependencies for Go with modules without abusing your code dependencies.
 
+## Motivation
+
+Before Go 1.13 solution with `tools.go` (https://github.com/golang/go/issues/25922) had worked well enough without abusing go.mod/go.sum file by dependencies hidden under a tag. Now with go 1.13.x `go mod tidy` adds such dependencies to module's go.mod go.sum files, which I want to avoid.
+
 ## How it works
 
 * binary dependencies described in `_tools/linter/tools.go`.
